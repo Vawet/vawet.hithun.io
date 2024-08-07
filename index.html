@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>盒子阴影</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            margin: 100px auto;
+            /* 100px 表示元素在上、右、下、左四个方向的外边距都为100像素。
+            auto 表示水平方向的外边距会自动调整，以使元素在其容器中水平居中对齐。  */
+            /* box-shadow:10px 10px 10px -4px rgba(0,0,0,.3); */
+            /* 最基本的写法是
+            box-shadow:10px 10px; 就是阴影的水平距离和数值距离都必须写*/
+        }
+
+        /* 现在想设置鼠标经过的才显示阴影的特效  就采用冒号hover的阴影*/
+        div:hover {
+            /* 那就把上面的box-shadow复制到下面来 */
+            box-shadow: 10px 10px 10px -4px rgba(0, 0, 0, .3);
+            /* 从前往后一次代表水平阴影的位置+垂直阴影的位置+模糊的程度blur+阴影的大小尺寸+阴影的颜色
+            blur模糊程度越大 那么阴影的
+
+
+            只有盒子有阴影的大小尺寸 文字不能设置阴影的大小
+            文字是text-shadow 盒子是box-shadow
+            
+            （最好设置成rgba）含有一定的透明度 如果透明度是0的话 就会显示纯黑色 */
+            /* 默认情况下是外阴影 如果想要设置内阴影的话 需要在color后面写inset属性*/
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+</body>
+
+</html>
